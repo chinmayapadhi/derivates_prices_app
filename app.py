@@ -46,7 +46,7 @@ def add_probability_columns(calls, puts, random_walks_t_student, random_walks_bo
 def run_app():
     # Streamlit app
     st.title("Options Analysis")
-    ticker = st.text_input("Enter the stock ticker (e.g., AAPL):")
+    ticker = st.text_input("Enter the stock ticker (e.g., AMZN):")
     
     if ticker:
         stock = yf.Ticker(ticker)
