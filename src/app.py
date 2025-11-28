@@ -11,7 +11,7 @@ def run_app():
     st.title("Options Analysis")
     
     # User input
-    ticker = st.text_input("Enter the stock ticker (e.g., AAPL):")
+    ticker = st.text_input("Enter the stock ticker (e.g., AAPL, ^SPX , ^RUT):")
     
     if ticker:
         try:
