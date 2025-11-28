@@ -45,8 +45,10 @@ class OptionModel:
         
         # Remove low volume options
         df = df.dropna(subset=['Volume'])
-        df = df[df['Volume'] >= 500]
-        
+        if self.ticker == "^XSP":
+            df = df[df['Volume'] >= 25]
+        else:
+            df = df[df['Volume'] >= 500]
         return df
     
     def calculate_derivatives(self, df: pd.DataFrame, option_type: Literal['call', 'put']) -> pd.DataFrame:
