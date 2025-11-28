@@ -45,7 +45,7 @@ class OptionModel:
         
         # Remove low volume options
         df = df.dropna(subset=['Volume'])
-        df = df[df['Volume'] >= 5]
+        df = df[df['Volume'] >= 500]
         
         return df
     
