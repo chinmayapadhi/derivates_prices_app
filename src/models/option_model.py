@@ -47,6 +47,8 @@ class OptionModel:
         df = df.dropna(subset=['Volume'])
         if self.ticker == "^XSP":
             df = df[df['Volume'] >= 25]
+        elif self.ticker == "^SPX":
+            df = df[df['Volume'] >= 200]
         else:
             df = df[df['Volume'] >= 500]
         return df
