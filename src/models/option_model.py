@@ -46,9 +46,9 @@ class OptionModel:
         # Remove low volume options
         df = df.dropna(subset=['Volume'])
         if self.ticker == "^XSP":
-            df = df[df['Volume'] >= 25]
+            df = df[df['Volume'] >= 50]
         elif self.ticker == "^SPX":
-            df = df[df['Volume'] >= 200]
+            df = df[df['Volume'] >= 1000]
         else:
             df = df[df['Volume'] >= 500]
         return df
