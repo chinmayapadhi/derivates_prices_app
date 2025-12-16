@@ -5,3 +5,4 @@ matplotlib>=3.10.0
 numpy>=2.2.0
 scipy>=1.15.0
 typing-extensions>=4.0.0
+dxfeed>=0.5.3
